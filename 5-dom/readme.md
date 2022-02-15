@@ -42,6 +42,9 @@ DOM ile HTML dokümanları içerisindeki nesnelere kolaylıkla ulaşıp değişi
 
 <img src="img4.png">
 
+Aniden dark mode geçişi yapılmış :)
+
+Ek olarak:
 ```javascript
    item.innerHTML = "son öge değiştirildi"
 ```
@@ -59,4 +62,20 @@ DOM ile HTML dokümanları içerisindeki nesnelere kolaylıkla ulaşıp değişi
    newItem.append(newLi)
 ```
 <img src="img5.png">
+
+<hr>
+
+*Class bilgisi ekleyelim.*
+```javascript
+   let ul = document.querySelector("ul")
+   ul.classList.add("element")
+   console.log(ul)
+   let newUl = document.querySelector(".element")
+   newUl.style.backgroundColor = "blue"
+```
+<img src="img6.png">
+
+*Sonraki konularda görüşmek üzere...*
+*Sağlıkla kalın.*
+
 

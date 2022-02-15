@@ -20,3 +20,10 @@ let newItem = document.querySelector("ul")
 let newLi = document.createElement('li')
 newLi.innerHTML = "yeni oluşturulan öge"
 newItem.append(newLi)
+
+//class bilgisi ekleme
+let ul = document.querySelector("ul")
+ul.classList.add("element")
+console.log(ul)
+let newUl = document.querySelector(".element")
+newUl.style.backgroundColor = "blue"
