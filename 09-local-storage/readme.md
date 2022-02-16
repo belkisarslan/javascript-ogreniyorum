@@ -37,6 +37,8 @@ Verilerimizi console üzerinde bu şekilde görebiliyoruz.
 <img src="img4.png">
 
 
+Kaynak: https://www.youtube.com/c/Kodluyoruz
+
 
 
 
