@@ -1,0 +1,7 @@
+{
+  "userName" : "blks",
+  "password" : 1234,
+  "serverIP" : "127.0.0.1",
+  "serverName" : "server",
+  "userID" : [1, 2, 3, 4, 5]
+}
