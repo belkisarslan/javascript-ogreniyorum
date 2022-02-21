@@ -86,3 +86,33 @@ Dizinin son elemanını değiştirmek:
   [100, 30, 40, false, 1000]
 ```
 
+İç içe dizileri tek bir dizi haline getirmek:
+
+```javascript
+   let arr = [1, 2, 3, 4, [5, 6, [7, 8]]]
+   console.log(arr.flat())
+```
+```javascript
+   [1, 2, 3, 4, 5, 6, Array(2)]
+```
+Katman belirleyerek en içte olana da ulaşabiliriz.
+```javascript
+   console.log(arr.flat(2))
+```
+```javascript
+   [1, 2, 3, 4, 5, 6, 7, 8]
+```
+Filtreleme yapmak:
+Karakter sayısı 6'dan büyük olanları seçelim
+
+```javascript
+   let products= ["domates", "salatalık", "turp", "havuç", "pırasa", "elma", "soğan",]
+   let result = products.filter(product => product.length > 6)
+   console.log(result);
+```
+```javascript
+   ['domates', 'salatalık']
+```
+
+
+
