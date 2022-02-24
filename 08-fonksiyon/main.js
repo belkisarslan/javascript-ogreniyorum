@@ -32,3 +32,17 @@ function domClick(){
     // console.log(this.style.color = "red")
     this.style.color == "red" ? this.style.color ="black" : this.style.color ="red"
 }
+
+//First class function
+
+const arr = [1, "blks", function() {console.log("bu array'den gelen fonksiyon")}]
+arr[2]()
+
+const obj = {
+    num : 1,
+    name : "blks",
+    func : function() {console.log("bu object'den gelen fonksiyon")}
+}
+obj.func()
+
+console.log(10 + (function() {return 20;})())
