@@ -30,4 +30,73 @@ console.log(Object.keys(day))
 console.log(Object.values(day))
 
 
+//Object Literal
+const person = {
+    name: "blks",
+    surname: "arsln",
+    age: "30",
+    fullName: function(){
+        return this.name + '' + this.surname
+    }
+}
+console.log(person)
 
+
+//dot Notation
+console.log(person.name)
+console.log(person.age)
+console.log(person.fullName())
+
+person.job = "student"
+
+console.log(person)
+console.log(person.job)
+
+
+//bracket notation
+console.log(person['name'])
+console.log(person['job'])
+console.log(person['fullName']())
+console.log(person['na'+'me'])
+
+
+//constructor
+function Person(name, surname, age){
+    const obj = {}
+    obj.name = name
+    obj.surname = surname
+    obj.age = age
+    obj.fullName = function(){
+        return obj.name + '' + obj.surname
+    }
+    return obj
+}
+const person1 = new Person('peter', 'pan', 8)
+const person2 = new Person('heidi', 'adelheid', 5)
+console.log(person1)
+console.log(person2)
+
+
+
+//object constructor
+const person3 = new Object()
+person3.name = 'cedric'
+person3.surname = 'CEDRİC'
+person3.age = 8
+person3.fullName = function(){
+    console.log(this)
+    return this.name + " " + this.surname
+}
+console.log(person3)
+console.log(person3.age)
+console.log(person3.fullName())
+
+
+//object.create()
+const chen = Object.create(person3)
+chen.name = 'chen'
+chen.surname = 'CHEN'
+chen.age = 8
+console.log(chen)
+console.log(chen.fullName())
+console.log(person3)
