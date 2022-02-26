@@ -100,3 +100,19 @@ chen.age = 8
 console.log(chen)
 console.log(chen.fullName())
 console.log(person3)
+
+
+//object destructuring
+const person4 = {
+    name : 'harry',
+    surname : 'potter',
+    age : 11
+}
+
+let {name: name, surname: surname, age: age} = person4
+console.log(name, surname, age)
+
+
+//spread operator in object literals (...)
+const person5 = {...person4}
+console.log(person5)
