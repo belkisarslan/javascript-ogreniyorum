@@ -116,3 +116,25 @@ console.log(name, surname, age)
 //spread operator in object literals (...)
 const person5 = {...person4}
 console.log(person5)
+
+
+//class
+class Person7 {
+    constructor(name,job){
+        this.name = name
+        this.job = job
+    }
+}
+let tom = new Person7 ('tom', 'student')
+let jerry = new Person7 ('jerry', 'student')
+console.log(tom, jerry)
+
+//subclasses
+class Student extends Person7{
+    constructor(name, job, number){
+        super(name, job)
+        this.number = number
+    }
+}
+let student = new Student('duffy','student', '1234')
+console.log(student)
