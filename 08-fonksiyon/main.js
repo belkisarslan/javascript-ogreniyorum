@@ -10,6 +10,19 @@ function welcome(){
 hello() 
 
 // Arrow Function
+// arrow fonksiyonlarda this her zaman onu kapsayan kodun this değeriyle aynı değerdedir.
+
+window.year = 2021
+
+const myObj = {
+    year: 2022,
+    showYear: function(){
+        console.log(this.year, this)
+    },
+    showYear2: () => console.log(this.year, this)
+}
+myObj.showYear()
+myObj.showYear2()
 
 const hello2 = (name) => `Merhaba ${name} hoş geldiniz`
 console.log(hello2("Belkıs Arslan"))
@@ -46,3 +59,23 @@ const obj = {
 obj.func()
 
 console.log(10 + (function() {return 20;})())
+
+//call
+
+const student = {
+    examResult: function(){
+        return this.name + " "+ this.grade
+    }
+}
+
+const student1 = {
+    name: 'cedric',
+    grade: 70
+}
+
+const student2 = {
+    name: 'chen',
+    grade: 100
+}
+console.log(student.examResult.call(student1))
+console.log(student.examResult.call(student2))
