@@ -35,3 +35,23 @@ newTodo({
 
 todoList()
 
+
+//ikinci örnek
+const books = [
+  {name: 've dağlar yankılandı', author: 'khaled hosseini'},
+  {name: 'dalgalar', author: 'virginia woolf'},
+  {name: 'gazap üzümleri', author: 'john steinbeck'}
+]
+
+const listBooks = () => {
+  books.map((book, index) => {
+    console.log(book, index)
+  })
+}
+
+const addNewBook = (newBook, callback) => {
+  books.push(newBook)
+  callback()
+}
+
+addNewBook({name: 'bülbülü öldürmek', author: 'harper lee'}, listBooks)
