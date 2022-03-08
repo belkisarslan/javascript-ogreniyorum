@@ -19,15 +19,17 @@ function addItem(){
     liDOM.addEventListener('click',function(){
             liDOM.style.textDecoration = 'line-through'
     })
+    deleteItem.addEventListener('click',function(){
+        //liDOM.style.display = "none"
+        liDOM.remove()
+    })
 
     saveLocalList(task)
-
-    deleteItem.addEventListener('click',function(){
-        liDOM.remove()
-        removeLocalList()
-    })
 }
 
+function removeLocalList() {
+    localStorage.removeItem('localList')
+}
 
 
 function showError(error){
@@ -39,7 +41,6 @@ function showError(error){
         messageError.remove();
     },1000);
 
-    // console.log(error);
 }
 
 function saveLocalList(task){
@@ -71,14 +72,4 @@ function getList(){
     });
 }
 
-function removeLocalList(){
-    let localList;
-    if(localStorage.getItem('localList') === null){
-       localList = []
-    }else{
-        localList = JSON.parse(localStorage.getItem('localList'))
-    }
-    //window.localStorage.removeItem('localList')
-    localStorage.setItem('localList',JSON.stringify(localList))
-}
 getList()

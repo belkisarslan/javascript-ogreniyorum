@@ -14,4 +14,5 @@ Merhabalar, bir alışveriş listesi hazırladım.
 
 Satın alınan ürünler tıklandığında üzerleri çizilecektir.
 
-Çalışmalarım Local Storage işlemiyle daha sonra devam edecektir. Sağlıkla Kalın..
+Local Storage işlemleri tamamlanmıştır.
+Sağlıkla kalın...

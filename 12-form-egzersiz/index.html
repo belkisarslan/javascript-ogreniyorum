@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
     <title>Alışveriş Listesi</title>
 </head>
 <body>
 
  <div class="container">
-        <h1>Alısveris Listesi</h1>
+        <h1>Alışveriş Listesi</h1>
      <div class="input-btn">
          <form action="#">
          <input type="text" name="text" placeholder="Alınacak Ürün Giriniz"> <button onclick="addItem()">Ekle</button>
-         <button id="deleteItem">Sıfırla</button>
+         <button onclick="removeLocalList()" id="deleteItem">Sıfırla</button>
          </form>
      </div>
        
