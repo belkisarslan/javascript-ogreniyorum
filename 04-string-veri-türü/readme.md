@@ -43,3 +43,35 @@ Karakter dizilerinin ilk karakteri 0'dan başlar.
 ```javascript
    console.log(firstName.search("x")); //sonuç: -1
 ```
+
+*Şimdi başka bir alıştırma yapalım.*
+
+```javascript
+   firstName = "bugun"
+   lastName = "ogrendiklerim"
+   let email = "bugun@ogrendiklerim.com"
+``` 
+*emaildeki "@" karakterine ulaşmaya çalışalım.*
+
+```javascript
+   console.log(email.search("@")); // sonuç:5
+```
+
+*"@" karakterinden sonrasını almaya çalışalım.*
+
+```javascript
+   let domain = email.slice(email.search("@") + 1)
+   console.log(domain) //sonuç: ogrendiklerim.com
+```
+*Peki ya "@" ile nokta arasını almak istersek? :)*
+
+```javascript
+   console.log(domain.slice(0, domain.indexOf("."))) //sonuç: ogrendiklerim
+```
+
+*Şimdi de başlangıç ve bitiş sorgusu yapalım.*
+
+```javascript
+   console.log(email.startsWith("bugun")) // true
+   console.log(email.endsWith("org")) // false
+```
